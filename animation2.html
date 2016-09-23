@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="jquery-2.2.1.js" type="text/javascript" charset="utf-8" async defer></script>
+    <title></title>
+    <style>
+    #slide1, #slide5,#slide4 {
+        width: 100px;
+        height: 100px;
+        background: #6E6266;
+        color: white;
+        display: none;
+        z-index: 100;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -o-transform-origin: top center;
+        -ms-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-transition: -webkit-transform 150ms ease-in-out;
+        -moz-transition: -moz-transform 150ms ease-in-out;
+        -o-transition: -o-transform 150ms ease-in-out;
+        -ms-transition: -ms-transform 150ms ease-in-out;
+        transition: transform 150ms ease-in-out;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    #slide2,  #slide6 {
+        width: 100px;
+        height: 100px;
+        background: #6E6266;
+        color: white;
+        display: none;
+        z-index: 100;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -o-transform-origin: top center;
+        -ms-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-transition: -webkit-transform 150ms ease-in-out;
+        -moz-transition: -moz-transform 150ms ease-in-out;
+        -o-transition: -o-transform 150ms ease-in-out;
+        -ms-transition: -ms-transform 150ms ease-in-out;
+        transition: transform 150ms ease-in-out;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    #slide3 {
+        width: 100px;
+        height: 100px;
+        background: #6E6266;
+        color: white;
+        display: none;
+        z-index: 100;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: right center;
+        -moz-transform-origin: right center;
+        -o-transform-origin: right center;
+        -ms-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transition: -webkit-transform 150ms ease-in-out;
+        -moz-transition: -moz-transform 150ms ease-in-out;
+        -o-transition: -o-transform 150ms ease-in-out;
+        -ms-transition: -ms-transform 150ms ease-in-out;
+        transition: transform 150ms ease-in-out;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .transitionIn {
+    }
+
+    .transitionOut1 {
+        -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+        -moz-transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+        -o-transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+        -ms-transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+        transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+    }
+    
+    .transitionOut2 {
+        -webkit-transform: translate3d(-30px, 0, 0) rotate3d(0, 1, 0, 90deg);
+        -moz-transform: translate3d(-30px, 0, 0)rotate3d(0, 1, 0, 90deg);
+        -o-transform: translate3d(-30px, 0, 0) rotate3d(0, 1, 0, 90deg);
+        -ms-transform: translate3d(-30px, 0,0) rotate3d(0, 1 , 0, -90deg)
+        transform: translate3d(-30px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    }
+    
+    .transitionOut3 {
+        -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 90deg);
+        -moz-transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 90deg);
+        -o-transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 90deg);
+        -ms-transform: translate3d(0, 0,0) rotate3d(0, 1, 0, 90deg);
+        transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 90deg);
+    }
+    </style>
+</head>
+<script>
+
+function showBox() {
+    setTimeout(function() {
+        $("#slide1").show();
+         setTimeout(function() {
+            $("#slide1").addClass("transitionIn");
+        }, 300)
+
+
+    }, 500);
+    setTimeout(function() {
+        $("#slide2").show();
+        setTimeout(function() {
+            $("#slide2").addClass("transitionIn");
+        }, 300)
+
+    }, 1000)
+    setTimeout(function() {
+        $("#slide3").show();
+        setTimeout(function() {
+            $("#slide3").addClass("transitionIn");
+        }, 300)
+
+    }, 1500)
+    setTimeout(function() {
+        $("#slide4").show();
+        setTimeout(function() {
+            $("#slide4").addClass("transitionIn");
+        }, 300)
+
+    }, 2000)
+    setTimeout(function() {
+        $("#slide5").show();
+        $("#slide5").addClass("transitionIn");
+        setTimeout(function() {
+        }, 300)
+    }, 2500)
+    setTimeout(function() {
+        $("#slide6").show();
+        
+        $("#slide6").addClass("transitionIn");
+        setTimeout(function() {
+            }, 300)
+        hideBox();
+    }, 3000)
+}
+
+function hideBox() {
+    setTimeout(function() {
+        $("#slide6").addClass("transitionOut2");
+        setTimeout(function() {
+            $("#slide6").removeClass("transitionOut2");
+            $("#slide6").hide();
+        }, 300)
+
+
+    }, 500);
+    setTimeout(function() {
+        $("#slide5").addClass("transitionOut1");
+        setTimeout(function() {
+            $("#slide5").removeClass("transitionOut1");
+            $("#slide5").hide();
+        }, 300)
+
+    }, 1000)
+    setTimeout(function() {
+        $("#slide4").addClass("transitionOut1");
+        setTimeout(function() {
+            $("#slide4").removeClass("transitionOut1");
+            $("#slide4").hide();
+        }, 300)
+
+    }, 1500)
+    setTimeout(function() {
+        $("#slide3").addClass("transitionOut3");
+        setTimeout(function() {
+            $("#slide3").removeClass("transitionOut3");
+            $("#slide3").hide();
+        }, 300)
+
+    }, 2000)
+    setTimeout(function() {
+        $("#slide2").addClass("transitionOut2");
+        setTimeout(function() {
+            $("#slide2").removeClass("transitionOut2");
+            $("#slide2").hide();
+        }, 300)
+
+    }, 2500)
+    setTimeout(function() {
+        $("#slide1").addClass("transitionOut1");
+        setTimeout(function() {
+            $("#slide1").removeClass("transitionOut1");
+            $("#slide1").hide();
+        }, 300)
+
+        showBox();
+    }, 3000)
+}
+showBox();
+</script>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="view col-md-6" id="slide1" style="background: #6E6266;border-style: ridge;
+border-color: #6E6266;
+border-width: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Message</div>
+            <div class="view col-md-6" id="slide2" style="background: #6E6266;border-style: ridge;
+border-color: #6E6266;
+border-width: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Share</div>
+            <br>
+        </div>
+        <div class="col-md-12">
+            <div class="view col-md-6" id="slide3" style="background: red;border-style: ridge;
+border-color: red;
+border-width: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Camera</div>
+            <div class="view col-md-6" id="slide4" style="background: red;border-style: ridge;
+border-color: red;
+border-width: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Gallary</div>
+            <br>
+        </div>
+        <div class="col-md-12">
+            <div class="view col-md-6" id="slide5" style="background: #6E6266;border-style: ridge;
+border-color: #6E6266;
+border-width: 2px;">Bluetooth</div>
+            <div class="view col-md-6" id="slide6" style="background: #6E6266;border-style: ridge;
+border-color: #6E6266;
+border-width: 2px;">Cancle</div>
+        </div>
+    </div>
+</body>
+
+</html>
